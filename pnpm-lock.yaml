@@ -37,6 +37,7 @@ specifiers:
   tslib: ^2.4.0
   type-fest: ^2.12.2
   typedoc: ^0.22.15
+  typedoc-plugin-markdown: ^3.12.1
   typescript: ^4.6.4
   typesync: ^0.9.1
 
@@ -79,6 +80,7 @@ devDependencies:
   tslib: 2.4.0
   type-fest: 2.12.2
   typedoc: 0.22.15_typescript@4.6.4
+  typedoc-plugin-markdown: 3.12.1_typedoc@0.22.15
   typescript: 4.6.4
   typesync: 0.9.1
 
@@ -9070,6 +9072,15 @@ packages:
     resolution: {integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==}
     dependencies:
       is-typedarray: 1.0.0
+    dev: true
+
+  /typedoc-plugin-markdown/3.12.1_typedoc@0.22.15:
+    resolution: {integrity: sha512-gMntJq7+JlGJZ5sVjrkzO/rG2dsmNBbWk5ZkcKvYu6QOeBwGcK5tzEyS0aqnFTJj9GCHCB+brAnTuKtAyotNwA==}
+    peerDependencies:
+      typedoc: '>=0.22.0'
+    dependencies:
+      handlebars: 4.7.7
+      typedoc: 0.22.15_typescript@4.6.4
     dev: true
 
   /typedoc/0.22.15_typescript@4.6.4:

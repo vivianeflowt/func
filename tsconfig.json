@@ -22,5 +22,11 @@
     "include": [
         "src/**/*.ts",
         "../../typings/**/*.d.ts"
-    ]
+    ],
+    "typedocOptions": {
+        "entryPoints": [
+            "src"
+        ],
+        "out": "docs"
+    }
 }

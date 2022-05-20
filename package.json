@@ -3,6 +3,20 @@
   "version": "0.0.0",
   "description": "functional programming helpers",
   "license": "MIT",
+  "author": {
+    "name": "Viviane Florido @vivianeflowt",
+    "email": "vivianeflowt@gmail.com"
+  },
+  "repository": "git@github.com:vivianeflowt/pixy-func.git",
+  "homepage": "https://github.com/vivianeflowt/pixy-func",
+  "bugs": "https://github.com/vivianeflowt/pixy-func/issues",
+  "keywords": [
+    "extension",
+    "funcional programing",
+    "function",
+    "helper",
+    "lodash"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -15,6 +29,9 @@
   },
   "exports": {
     ".": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   },
   "scripts": {
     "build": "rimraf dist && tsc --build --force",
@@ -33,8 +50,9 @@
     "test:clear": "jest --clearCache",
     "test:cov": "jest --runInBand --coverage",
     "test:watch": "jest --runInBand --watch",
-    "typedoc": "typedoc --out docs --target es6 --theme minimal --mode file src",
+    "typedoc": "typedoc",
     "typesync": "typesync",
+    "validate": "npx package-json-validator --recommendations && npx validate-npm-package",
     "watch": "tsc --watch"
   },
   "prettier": {
@@ -94,6 +112,7 @@
     "tslib": "^2.4.0",
     "type-fest": "^2.12.2",
     "typedoc": "^0.22.15",
+    "typedoc-plugin-markdown": "^3.12.1",
     "typescript": "^4.6.4",
     "typesync": "^0.9.1"
   }

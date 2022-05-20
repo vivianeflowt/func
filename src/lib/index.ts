@@ -1,4 +1,3 @@
-export * from './auto-sort';
 export * from './collect';
 export * from './if-else';
 export * from './if-then';
