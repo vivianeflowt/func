@@ -158,6 +158,6 @@ dist
 .nfs*
 
 
-# .cache
-# .jest-cache
-# .vscode
+.cache
+.jest-cache
+.vscode
