@@ -1,142 +1,34 @@
-name: Test Action
-
+name: Test
 on:
   push:
+    branches:
+      - master
+      - develop
 
 jobs:
-  test_default_inputs:
-    name: Test with default inputs
-
-    runs-on: ${{ matrix.os }}
-
+  test:
+    runs-on: ubuntu-20.04
+    
     strategy:
-      fail-fast: false
       matrix:
-        pnpm:
-          - 4.11.1
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
+        version: [10, 12, 14, 16]
+        os: [ubuntu-latest, windows-latest,macos-latest]
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Run the action
-        uses: ./
-        with:
-          version: 4.11.1
-
-      - name: 'Test: which'
-        run: which pnpm; which pnpx
-
-      - name: 'Test: install'
-        run: pnpm install
-
-  test_explicit_inputs:
-    name: Test with explicit inputs
-
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      fail-fast: false
-      matrix:
-        pnpm:
-          - 4.11.1
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run the action
-        uses: ./
-        with:
-          version: 4.11.1
-          dest: ~/test/pnpm
-
-      - name: 'Test: which'
-        run: which pnpm && which pnpx
-
-      - name: 'Test: install'
-        run: pnpm install
-
-  test_run_install:
-    name: 'Test with run_install (${{ matrix.run_install.name }}, ${{ matrix.os }})'
-
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      fail-fast: false
-      matrix:
-        pnpm:
-          - 4.11.1
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
-        run_install:
-          - name: 'null'
-            value: 'null'
-          - name: 'empty object'
-            value: '{}'
-          - name: 'recursive'
-            value: |
-              recursive: true
-          - name: 'global'
-            value: |
-              args:
-                - --global
-                - --global-dir=./pnpm-global
-                - npm
-                - yarn
-                - pnpm
-          - name: 'array'
-            value: |
-              - {}
-              - recursive: true
-              - args:
-                - --global
-                - --global-dir=./pnpm-global
-                - npm
-                - yarn
-                - pnpm
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run the action
-        uses: ./
-        with:
-          version: 4.11.1
-          run_install: ${{ matrix.run_install.value }}
-
-      - name: 'Test: which'
-        run: which pnpm; which pnpx
-
-      - name: 'Test: install'
-        run: pnpm install
-
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Test Package
-        uses: ./
-        with:
-          version: 4.11.1
-          run_install: ${{ matrix.run_install.value }}
-
-      - name: 'install'
-        run: pnpm install        
-
-      - name: 'build'
-        run: pnpm build                
-
-      - name: 'lint'
-        run: pnpm run lint        
-
-      - name: 'test'
-        run: pnpm run test              
+    - uses: actions/checkout@v2
+    - uses: pnpm/action-setup@v2.0.1
+      with:
+        version: 7.0.0
+    - name: Use Node.js ${{ matrix.version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+    - name: Install
+      run: pnpm install
+    - name: Build
+      run: pnpm build
+    - name: Lint
+      run: pnpm run lint
+    - name: Test
+      run: pnpm test
