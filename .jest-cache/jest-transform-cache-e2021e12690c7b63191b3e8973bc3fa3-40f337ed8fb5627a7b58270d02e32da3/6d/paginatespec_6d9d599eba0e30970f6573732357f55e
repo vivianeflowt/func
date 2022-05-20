@@ -1,8 +1,0 @@
-783c6fb6851bd58932c6f885c8b24958
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const tslib_1 = require("tslib");
-const paginate_1 = tslib_1.__importDefault(require("../src/lib/paginate"));
-test('paginate', () => {
-    expect((0, paginate_1.default)(2)(2)([1, 2, 3, 4, 5, 6, 7, 8, 9])).toEqual(expect.arrayContaining([3, 4]));
-});
