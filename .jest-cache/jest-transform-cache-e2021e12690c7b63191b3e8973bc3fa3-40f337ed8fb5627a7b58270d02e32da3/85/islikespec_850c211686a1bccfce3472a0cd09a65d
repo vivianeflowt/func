@@ -1,0 +1,10 @@
+6221e7a1a1749dfb862a7a2217ba743b
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const is_like_1 = tslib_1.__importDefault(require("../src/lib/is-like"));
+test('isLike', () => {
+    expect((0, is_like_1.default)(1)(1)).toEqual(true);
+    expect((0, is_like_1.default)(1)('1')).toEqual(true);
+    expect((0, is_like_1.default)(1)(2)).toEqual(false);
+});

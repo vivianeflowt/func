@@ -1,0 +1,8 @@
+08fa642fa759117b6ce7bd5db5d6bb03
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const to_camel_case_1 = tslib_1.__importDefault(require("../src/lib/to-camel-case"));
+test('toCamelCase', () => {
+    expect((0, to_camel_case_1.default)('test str')).toEqual('testStr');
+});

@@ -1,0 +1,9 @@
+9ec13a1bfd9ba8e0a4f1ea9353bd0953
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const random_from_list_1 = tslib_1.__importDefault(require("../src/lib/random-from-list"));
+const array = [1, 2, 3, 4, 5];
+test('randomFromList', () => {
+    expect(array).toContain((0, random_from_list_1.default)(array));
+});

@@ -1,0 +1,8 @@
+b050a854a88be11ea0953ba7ca2d327f
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const unaccented_1 = tslib_1.__importDefault(require("../src/lib/unaccented"));
+test('unaccented', () => {
+    expect((0, unaccented_1.default)('Ábôà')).toEqual('Aboa');
+});

@@ -1,0 +1,242 @@
+bb750f5aca664585b532e72a702d20b4
+"use strict";
+
+/* istanbul ignore next */
+function cov_mut7dgmfa() {
+  var path = "/media/vivi/gurudavivi/PIXY/pixy-fn/src/lib/unique-by-key.ts";
+  var hash = "8d8c4c4eeaed3e1e5b8728bff17ed7388eb908df";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/media/vivi/gurudavivi/PIXY/pixy-fn/src/lib/unique-by-key.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 3,
+          column: 29
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 13
+        },
+        end: {
+          line: 4,
+          column: 33
+        }
+      },
+      "3": {
+        start: {
+          line: 6,
+          column: 4
+        },
+        end: {
+          line: 6,
+          column: 147
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 21
+        },
+        end: {
+          line: 6,
+          column: 146
+        }
+      },
+      "5": {
+        start: {
+          line: 6,
+          column: 82
+        },
+        end: {
+          line: 6,
+          column: 115
+        }
+      },
+      "6": {
+        start: {
+          line: 8,
+          column: 0
+        },
+        end: {
+          line: 8,
+          column: 34
+        }
+      },
+      "7": {
+        start: {
+          line: 9,
+          column: 0
+        },
+        end: {
+          line: 9,
+          column: 30
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "uniqueByKey",
+        decl: {
+          start: {
+            line: 5,
+            column: 9
+          },
+          end: {
+            line: 5,
+            column: 20
+          }
+        },
+        loc: {
+          start: {
+            line: 5,
+            column: 32
+          },
+          end: {
+            line: 7,
+            column: 1
+          }
+        },
+        line: 5
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 6,
+            column: 11
+          },
+          end: {
+            line: 6,
+            column: 12
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 21
+          },
+          end: {
+            line: 6,
+            column: 146
+          }
+        },
+        line: 6
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 6,
+            column: 67
+          },
+          end: {
+            line: 6,
+            column: 68
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 82
+          },
+          end: {
+            line: 6,
+            column: 115
+          }
+        },
+        line: 6
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "8d8c4c4eeaed3e1e5b8728bff17ed7388eb908df"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_mut7dgmfa = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_mut7dgmfa();
+cov_mut7dgmfa().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/* istanbul ignore next */
+cov_mut7dgmfa().s[1]++;
+exports.uniqueByKey = void 0;
+const fp_1 =
+/* istanbul ignore next */
+(cov_mut7dgmfa().s[2]++, require("lodash/fp"));
+
+function uniqueByKey(predicate) {
+  /* istanbul ignore next */
+  cov_mut7dgmfa().f[0]++;
+  cov_mut7dgmfa().s[3]++;
+  return (list) => {
+    /* istanbul ignore next */
+    cov_mut7dgmfa().f[1]++;
+    cov_mut7dgmfa().s[4]++;
+    return (0, fp_1.pipe)(fp_1.reverse, (0, fp_1.reduce)((acc, cur) => {
+      /* istanbul ignore next */
+      cov_mut7dgmfa().f[2]++;
+      cov_mut7dgmfa().s[5]++;
+      return { ...acc,
+        [cur[predicate]]: cur
+      };
+    }, {}), fp_1.values)([...list]);
+  };
+}
+
+/* istanbul ignore next */
+cov_mut7dgmfa().s[6]++;
+exports.uniqueByKey = uniqueByKey;
+
+/* istanbul ignore next */
+cov_mut7dgmfa().s[7]++;
+exports.default = uniqueByKey;

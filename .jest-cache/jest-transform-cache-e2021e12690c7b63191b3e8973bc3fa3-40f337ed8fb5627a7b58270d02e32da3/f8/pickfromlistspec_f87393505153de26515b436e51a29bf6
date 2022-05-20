@@ -1,0 +1,12 @@
+d9eb906eabdc4bfe2bd34e42e9f50e79
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const pick_from_list_1 = tslib_1.__importDefault(require("../src/lib/pick-from-list"));
+describe('pickFromList', () => {
+    const array = [1, 2, 3, 4, 5];
+    test('should pass', () => {
+        const result = (0, pick_from_list_1.default)(array);
+        expect(array).toContain(result);
+    });
+});

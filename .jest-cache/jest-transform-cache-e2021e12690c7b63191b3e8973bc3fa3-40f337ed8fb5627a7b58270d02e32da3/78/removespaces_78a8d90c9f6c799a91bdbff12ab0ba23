@@ -1,0 +1,150 @@
+e33f7e86622d748d46a17da234d7d5d1
+"use strict";
+
+/* istanbul ignore next */
+function cov_8cmzfbfob() {
+  var path = "/media/vivi/gurudavivi/PIXY/pixy-fn/src/lib/remove-spaces.ts";
+  var hash = "deba2ca7b3a9f0f6200931dc7900fd2d1c8c5ec9";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/media/vivi/gurudavivi/PIXY/pixy-fn/src/lib/remove-spaces.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 3,
+          column: 30
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 34
+        }
+      },
+      "3": {
+        start: {
+          line: 13,
+          column: 0
+        },
+        end: {
+          line: 13,
+          column: 36
+        }
+      },
+      "4": {
+        start: {
+          line: 14,
+          column: 0
+        },
+        end: {
+          line: 14,
+          column: 31
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "removeSpaces",
+        decl: {
+          start: {
+            line: 10,
+            column: 9
+          },
+          end: {
+            line: 10,
+            column: 21
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 27
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 10
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "deba2ca7b3a9f0f6200931dc7900fd2d1c8c5ec9"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_8cmzfbfob = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_8cmzfbfob();
+cov_8cmzfbfob().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/* istanbul ignore next */
+cov_8cmzfbfob().s[1]++;
+exports.removeSpaces = void 0;
+/**
+ * Remove blank spaces from string
+ * @category String
+ * @param {string} str
+ * @returns {string}
+ */
+
+function removeSpaces(str) {
+  /* istanbul ignore next */
+  cov_8cmzfbfob().f[0]++;
+  cov_8cmzfbfob().s[2]++;
+  return str.replace(/\s/g, '');
+}
+
+/* istanbul ignore next */
+cov_8cmzfbfob().s[3]++;
+exports.removeSpaces = removeSpaces;
+
+/* istanbul ignore next */
+cov_8cmzfbfob().s[4]++;
+exports.default = removeSpaces;

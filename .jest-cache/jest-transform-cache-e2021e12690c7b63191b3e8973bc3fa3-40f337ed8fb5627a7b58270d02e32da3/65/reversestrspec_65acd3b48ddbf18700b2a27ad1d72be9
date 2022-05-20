@@ -1,0 +1,8 @@
+7690c46e15ee78417fb118ee32523b6b
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const reverse_str_1 = tslib_1.__importDefault(require("../src/lib/reverse-str"));
+test('reverseStr', () => {
+    expect((0, reverse_str_1.default)('abcde')).toEqual('edcba');
+});

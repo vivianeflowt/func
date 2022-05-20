@@ -1,0 +1,207 @@
+63d54673f37df4127aecf575a69d0b9e
+"use strict";
+
+/* istanbul ignore next */
+function cov_1kmxcapziy() {
+  var path = "/media/vivi/gurudavivi/PIXY/pixy-fn/src/lib/is-like.ts";
+  var hash = "09be308b1fd2dccb0b2aefdbad71aac1bc80c89f";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/media/vivi/gurudavivi/PIXY/pixy-fn/src/lib/is-like.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 3,
+          column: 24
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 13
+        },
+        end: {
+          line: 4,
+          column: 33
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 4
+        },
+        end: {
+          line: 16,
+          column: 6
+        }
+      },
+      "4": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 74
+        }
+      },
+      "5": {
+        start: {
+          line: 18,
+          column: 0
+        },
+        end: {
+          line: 18,
+          column: 24
+        }
+      },
+      "6": {
+        start: {
+          line: 19,
+          column: 0
+        },
+        end: {
+          line: 19,
+          column: 25
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isLike",
+        decl: {
+          start: {
+            line: 13,
+            column: 9
+          },
+          end: {
+            line: 13,
+            column: 15
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 19
+          },
+          end: {
+            line: 17,
+            column: 1
+          }
+        },
+        line: 13
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 14,
+            column: 11
+          },
+          end: {
+            line: 14,
+            column: 12
+          }
+        },
+        loc: {
+          start: {
+            line: 14,
+            column: 18
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        line: 14
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "09be308b1fd2dccb0b2aefdbad71aac1bc80c89f"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1kmxcapziy = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_1kmxcapziy();
+cov_1kmxcapziy().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/* istanbul ignore next */
+cov_1kmxcapziy().s[1]++;
+exports.isLike = void 0;
+const fp_1 =
+/* istanbul ignore next */
+(cov_1kmxcapziy().s[2]++, require("lodash/fp"));
+/**
+ * Description placeholder
+ * @category Comparability
+ * @template A
+ * @template B
+ * @param {A} a
+ * @returns {(b: B) => boolean}
+ */
+
+function isLike(a) {
+  /* istanbul ignore next */
+  cov_1kmxcapziy().f[0]++;
+  cov_1kmxcapziy().s[3]++;
+  return (b) => {
+    /* istanbul ignore next */
+    cov_1kmxcapziy().f[1]++;
+    cov_1kmxcapziy().s[4]++;
+    return (0, fp_1.eq)((0, fp_1.toString)(a))((0, fp_1.toString)(b));
+  };
+}
+
+/* istanbul ignore next */
+cov_1kmxcapziy().s[5]++;
+exports.isLike = isLike;
+
+/* istanbul ignore next */
+cov_1kmxcapziy().s[6]++;
+exports.default = isLike;

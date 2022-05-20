@@ -1,0 +1,9 @@
+601ea139c0d67842a2b8baf9d324284c
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const limit_1 = tslib_1.__importDefault(require("../src/lib/limit"));
+const array = [1, 2, 3, 4, 5, 6, 7, 8];
+test('limit', () => {
+    expect((0, limit_1.default)(4)(array)).toEqual(expect.arrayContaining([1, 2, 3, 4]));
+});

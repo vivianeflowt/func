@@ -1,0 +1,9 @@
+4f4a488e8e2228c8d1c735e59add17a6
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const shuffle_list_1 = tslib_1.__importDefault(require("../src/lib/shuffle-list"));
+const array = [2, 1, 4, 2, 3, 4, 4, 5, 6, 6];
+test('should pass', () => {
+    expect((0, shuffle_list_1.default)(array)).not.toEqual(array);
+});
