@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main,develop ]
+    branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
 
@@ -20,13 +20,15 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2.1.0
+      with:
+        version: 6.0.2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm install -g pnpm
+        cache: 'yarn'
     - run: pnpm install
+    - run: pnpm run install
     - run: pnpm run build --if-present
     - run: pnpm test

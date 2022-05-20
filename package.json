@@ -1,5 +1,5 @@
 {
-  "name": "pixy-fn",
+  "name": "pixy-func",
   "version": "0.0.0",
   "description": "functional programming helpers",
   "license": "MIT",
@@ -18,8 +18,6 @@
   },
   "scripts": {
     "build": "rimraf dist && tsc --build --force",
-    "bundle": "rimraf dist && ncc build ./src/index.ts -o dist/bundle",
-    "bundle:watch": "rimraf dist && ncc build -w ./src/index.ts -o dist/",
     "clean": "npx rimraf dist coverage",
     "commit": "cz",
     "depcheck": "npx depcheck",
@@ -58,8 +56,7 @@
     }
   },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "micro-memoize": "^4.0.10"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@faker-js/faker": "^6.3.1",
