@@ -1,4 +1,4 @@
-import uniqueObject from '../src/lib/unique-object';
+import uniqueObject from '../lib/unique-object';
 
 const array = [
   { name: 'Anissa', color: 'lime' },

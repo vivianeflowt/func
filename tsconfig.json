@@ -21,7 +21,11 @@
     },
     "include": [
         "src/**/*.ts",
-        "../../typings/**/*.d.ts"
+        "../../typings/**/*.d.ts",
+    ],
+    "exclude": [
+        "**__tests__/**",
+        "src/**/*.spec.ts",
     ],
     "typedocOptions": {
         "entryPoints": [

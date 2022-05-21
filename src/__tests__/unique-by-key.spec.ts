@@ -1,4 +1,4 @@
-import uniqueByKey from '../src/lib/unique-by-key';
+import uniqueByKey from '../lib/unique-by-key';
 
 const array = [
   { name: 'Patricia', color: 'azure' },

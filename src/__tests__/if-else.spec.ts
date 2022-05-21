@@ -1,6 +1,6 @@
 import f from 'lodash/fp';
 
-import ifElse from '../src/lib/if-else';
+import ifElse from '../lib/if-else';
 
 test('ifElse', () => {
   expect(ifElse(f.lte(3))(f.add(1))(f.add(2))(2)).toEqual(4);

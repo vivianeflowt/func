@@ -1,4 +1,4 @@
-import renameKeys from '../src/lib/rename-keys';
+import renameKeys from '../lib/rename-keys';
 
 const obj = { id: 2, name: 'Maria' };
 
