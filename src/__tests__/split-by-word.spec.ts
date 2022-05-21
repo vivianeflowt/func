@@ -1,4 +1,4 @@
-import splitByWord from '../src/lib/split-by-word';
+import splitByWord from '../lib/split-by-word';
 
 const str = 'Aatches even if Received contains Additional Elements';
 

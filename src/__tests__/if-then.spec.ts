@@ -1,6 +1,6 @@
 import { gte, isNumber, isString, multiply, toUpper } from 'lodash/fp';
 
-import ifThen from '../src/lib/if-then';
+import ifThen from '../lib/if-then';
 
 test('ifThen', () => {
   expect(ifThen(isNumber, gte(10))(multiply(2))(9)).toEqual(18);

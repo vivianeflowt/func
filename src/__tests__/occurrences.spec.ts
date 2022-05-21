@@ -1,4 +1,4 @@
-import occurrences from '../src/lib/occurrences';
+import occurrences from '../lib/occurrences';
 
 const array = [2, 1, 4, 2, 3, 4, 4, 5, 6, 6];
 

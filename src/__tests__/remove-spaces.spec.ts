@@ -1,4 +1,4 @@
-import removeSpaces from '../src/lib/remove-spaces';
+import removeSpaces from '../lib/remove-spaces';
 
 const str = '  test   text ';
 

@@ -1,4 +1,4 @@
-import shuffleList from '../src/lib/shuffle-list';
+import shuffleList from '../lib/shuffle-list';
 
 const array = [2, 1, 4, 2, 3, 4, 4, 5, 6, 6];
 
